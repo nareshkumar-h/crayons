@@ -14,8 +14,8 @@
 npm init stencil
 ```
 * Pick a starter:  component
-* Project name: theme-components
-```
+=* Project name: theme-components
+
 
 ```
 cd theme-components
@@ -30,35 +30,26 @@ npm start
 
 #### Step 1.2: Update Package.json
 
+* Update name ==> Npm Account Username ==> nareshkumarh
+
 ```json
 {
-  "name": "@nareshkumarh/theme-components",
-  "version": "1.0.0",
-  "description": "WebComponents for Developer Platform",
-  "main": "index.js",
-  "scripts": {
-    "publish":"npm publish --access public"    
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "name": "@nareshkumarh/theme-components",  
+  "version": "1.0.1",
+  "description": "Web Components for Developers",
 }
 ```
 
-#### Create index.js
-
-* index.js file  [ No Content ]
 
 
-#### Publish NPM Package
+#### 1.3 Publish NPM Package
 
 ```cmd
 npm publish --access public
 ```
-(or)
+![image](https://user-images.githubusercontent.com/2763774/154787083-6bc8a61c-05e1-49d1-9b96-bb517aa11ab5.png)
 
-```cmd
-npm run publish
-```
+#### 1.4 Verify Published Package
 
-![image](https://user-images.githubusercontent.com/2763774/154785865-93ad4135-eee6-4c18-96db-30da24afb399.png)
+![image](https://user-images.githubusercontent.com/2763774/154787151-4ce485a4-dea6-407d-ad8e-7de983827632.png)
+
