@@ -6,56 +6,49 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface FwButton {
+    }
+    interface FwRating {
+        "maxValue": number;
+        "value": number;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLFwButtonElement extends Components.FwButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLFwButtonElement: {
+        prototype: HTMLFwButtonElement;
+        new (): HTMLFwButtonElement;
+    };
+    interface HTMLFwRatingElement extends Components.FwRating, HTMLStencilElement {
+    }
+    var HTMLFwRatingElement: {
+        prototype: HTMLFwRatingElement;
+        new (): HTMLFwRatingElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "fw-button": HTMLFwButtonElement;
+        "fw-rating": HTMLFwRatingElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface FwButton {
+    }
+    interface FwRating {
+        "maxValue"?: number;
+        "value"?: number;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "fw-button": FwButton;
+        "fw-rating": FwRating;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "fw-button": LocalJSX.FwButton & JSXBase.HTMLAttributes<HTMLFwButtonElement>;
+            "fw-rating": LocalJSX.FwRating & JSXBase.HTMLAttributes<HTMLFwRatingElement>;
         }
     }
 }
